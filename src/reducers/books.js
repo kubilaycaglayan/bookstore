@@ -1,6 +1,6 @@
 import { CREATE_BOOK, REMOVE_BOOK } from '../constants';
 
-export const reducer = (state = { books: [] }, action) => {
+const reducer = (state = { books: [] }, action) => {
   switch (action.type) {
     case CREATE_BOOK:
       return {
@@ -18,3 +18,5 @@ export const reducer = (state = { books: [] }, action) => {
       return state;
   }
 };
+
+export default reducer;

@@ -2,10 +2,6 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { categories } from '../constants';
 
-const mapDispatchToProps = dispatch => ({
-
-});
-
 const BooksForm = () => (
   <form>
     <input />
@@ -23,5 +19,5 @@ const BooksForm = () => (
 
 export default connect(
   null,
-  mapDispatchToProps,
+  null,
 )(BooksForm);

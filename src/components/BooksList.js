@@ -7,10 +7,6 @@ const mapStateToProps = state => ({
   books: state.books,
 });
 
-const mapDispatchToProps = () => ({
-
-});
-
 const BooksList = props => {
   const { books } = props;
 
@@ -22,12 +18,12 @@ const BooksList = props => {
           <th>TITLE</th>
           <th>CATEGORY</th>
         </tr>
-      </thead> 
+      </thead>
       <tbody>
         {
           books.map(book => <Book key={book.id} book={book} />)
         }
-      </tbody>      
+      </tbody>
     </table>
   );
 };
@@ -38,5 +34,5 @@ BooksList.propTypes = {
 
 export default connect(
   mapStateToProps,
-  mapDispatchToProps,
+  null,
 )(BooksList);
