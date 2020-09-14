@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import categories from '../constants';
+import { categories } from '../constants';
 
 const mapDispatchToProps = dispatch => ({
 
