@@ -15,6 +15,6 @@ export const reducer = (state = { books: [] }, action) => {
       };
 
     default:
-      break;
+      return state;
   }
 };
