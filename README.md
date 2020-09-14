@@ -1,43 +1,53 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Project Name
+# Bookstore
 
-> One paragraph statement about the project.
-
-![screenshot](./)
-
-Additional description about the project and its features.
+> A bookstore where you can add, remove and see the books.
 
 ## Built With
 
 - React
 - JavaScript
-- SASS
+- Redux
 
 ## Live Demo
 
-[Live Demo Link]()
+[Live Demo Link](https://tk-bookstore.herokuapp.com/)
 
 
+<!-- GETTING STARTED -->
 ## Getting Started
 
-**This is an example of how you may give instructions on setting up your project locally.**
-**Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing.**
-
-
-To get a local copy up and running follow these simple example steps.
+To get a local copy up and running follow these simple steps.
 
 ### Prerequisites
 
-### Setup
+* npm
 
-### Install
+    ```sh
+    npm install npm@latest -g
+    ```
 
-### Usage
+### Installation
 
-### Run tests
+1. Clone the repo
 
-### Deployment
+    ```sh
+    git clone https://github.com/kubilaycaglayan/bookstore.git
+    ```
+
+2. Install NPM packages
+
+    ```sh
+    npm install
+    ```
+
+3. Start local server
+
+    ```sh
+    npm start
+    ```
+
 
 ## Authors
 
@@ -48,11 +58,17 @@ To get a local copy up and running follow these simple example steps.
 - Twitter: [@kbcaglayan](https://twitter.com/kbcaglayan)
 - Linkedin: [linkedin](https://linkedin.com/in/kubilaycaglayan)
 
+👤 **Tirthajyoti Ghosh**
+
+- GitHub - [@tirthajyoti-ghosh](https://github.com/tirthajyoti-ghosh)
+- Twitter - [@terrific_ghosh](https://twitter.com/terrific_ghosh)
+- LinkedIn - [linkedin](https://www.linkedin.com/in/tirthajyoti-ghosh/)
+
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](issues/).
+Feel free to check the [issues page](https://github.com/kubilaycaglayan/bookstore/issues).
 
 ## Show your support
 
@@ -60,9 +76,8 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-- Hat tip to anyone whose code was used
-- Inspiration
-- etc
+- `create-react-app` - https://github.com/facebook/create-react-app
+- `create react app buildpack` - https://github.com/mars/create-react-app-buildpack
 
 ## 📝 License
 
