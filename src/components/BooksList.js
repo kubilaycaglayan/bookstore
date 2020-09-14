@@ -16,6 +16,11 @@ const BooksList = props => {
 
   return (
     <table>
+      <tr>
+        <th>ID</th>
+        <th>TITLE</th>
+        <th>CATEGORY</th>
+      </tr>
       {
         books.map(book => <Book key={book.id} book={book} />)
       }
