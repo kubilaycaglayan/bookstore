@@ -6,12 +6,12 @@ export const reducer = (state = { books: [] }, action) => {
       return {
         books: [
           ...state.books,
-          action.payload.book
+          action.book
         ]
       };      
     case REMOVE_BOOK:
       return {
-        books: state.books.filter(book => book.id !== action.payload.id)
+        books: state.books.filter(book => book.id !== action.book.id)
       };
   
     default:
