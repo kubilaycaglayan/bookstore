@@ -3,7 +3,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const Book = ({ book, handleRemoveBook }) => {
-  const { id, title, category } = book;
+  const { title, category } = book;
 
   return (
     <div className="Book-Panel">
@@ -32,11 +32,16 @@ const Book = ({ book, handleRemoveBook }) => {
           <div className="Completed">Completed</div>
         </div>
       </div>
-      <div className="divider">
-
-      </div>
       <div className="chapter">
-
+        <div className="Current-Chapter">
+          CURRENT CHAPTER
+        </div>
+        <div className="Current-Lesson">
+          Chapter 17
+        </div>
+        <div className="Rectangle-2">
+          UPDATE PROGRESS
+        </div>
       </div>
 
     </div>
