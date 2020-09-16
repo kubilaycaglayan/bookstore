@@ -33,6 +33,14 @@ $white: #fafafa
   justify-content: $justify-content
   align-items: $align-items
 
+@mixin normalize()
+  font-weight: normal
+  font-stretch: normal
+  font-style: normal
+  line-height: normal
+  letter-spacing: normal
+
+
 body
   #root
     padding: 149px 100px
@@ -70,6 +78,7 @@ body
         background-color: $pale-grey
         padding: 40px 100px
         .Book-Panel
+          @include flex-it($justify-content: space-around, $align-items: center)
           margin-bottom: 15px
           padding: 32px 27px
           border-radius: 4px
@@ -118,5 +127,27 @@ body
               .remove
                 cursor: pointer
           .completion
+            @include flex-it($justify-content: space-around, $align-items: center)
+            .Oval-2
+              width: 68px
+              height: 68px
+              border: 5px $medium-blue solid
+              border-radius: 50%
+              margin-right: 21px
+            .Percent-Complete
+              width: 68px
+              height: 39px
+              font-family: Montserrat
+              font-size: 32px
+              @include normalize()
+              color: $black-three
+            .Completed
+              width: 80px
+              height: 18px
+              opacity: 0.5
+              font-family: Montserrat
+              font-size: 14px
+              @include normalize()
+              color: $black-three
           .divider
           .chapter

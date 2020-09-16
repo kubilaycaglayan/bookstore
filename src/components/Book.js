@@ -26,7 +26,11 @@ const Book = ({ book, handleRemoveBook }) => {
         </div>
       </div>
       <div className="completion">
-
+        <div className="Oval-2" />
+        <div>
+          <div className="Percent-Complete">100%</div>
+          <div className="Completed">Completed</div>
+        </div>
       </div>
       <div className="divider">
 
