@@ -10,12 +10,12 @@ const mapDispatchToProps = dispatch => ({
 
 const BooksForm = ({
   createBook,
-}) => {  
+}) => {
   const initialState = {
     title: '',
     category: categories[0],
   };
-  
+
   const [state, setState] = useState(initialState);
 
   const handleInputChange = event => {
@@ -38,10 +38,7 @@ const BooksForm = ({
       ...state,
       id: Math.floor(Math.random() * 100),
     });
-    setState({
-      title: '',
-      category: categories[0],
-    });
+    setState(initialState);
   };
 
   return (
@@ -51,7 +48,7 @@ const BooksForm = ({
         {
             categories.map((category, index) => (
               // eslint-disable-next-line react/no-array-index-key
-              <option className={state.category} key={index} value={category}>{category}</option>
+              <option key={index} value={category}>{category}</option>
             ))
           }
       </select>
