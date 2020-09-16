@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Book = ({ book }) => {
+const Book = ({ book, handleRemoveBook }) => {
   const { id, title, category } = book;
 
   return (
@@ -16,7 +16,7 @@ const Book = ({ book }) => {
         {category}
       </td>
       <td>
-        <button type='button'>Remove Book</button>
+        <button type='button' onClick={() => handleRemoveBook(book)}>Remove Book</button>
       </td>
     </tr>
   );
