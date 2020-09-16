@@ -43,7 +43,7 @@ const BooksForm = ({
     if (document.getElementById('title').value === '') return;
     createBook({
       ...state,
-      id: Math.floor(Math.random() * 100),
+      id: Math.floor(Math.random() * 999999),
     });
     setState({});
     document.getElementById('title').value = initialState.title;

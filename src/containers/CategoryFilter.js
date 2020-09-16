@@ -2,28 +2,40 @@ import React from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { categories } from '../constants';
+import { changeFilter } from '../actions';
 
-const CategoryFilter = () => {
-  const allCategories = ['All', ...categories];
+const mapStateToProps = state => ({
+  filter: state.filter,
+});
+
+const mapDispatchToProps = dispatch => ({
+  handleFilterSelect: filter => dispatch(changeFilter(filter)),
+});
+
+const CategoryFilter = ({
+  filter,
+  handleFilterSelect,
+}) => {
+  let allCategories = [filter, 'All', ...categories];
+  allCategories = [...new Set(allCategories)];
 
   return (
-    <select>
+    <select onChange={event => { handleFilterSelect(event.target.value); }}>
       {
-        allCategories.map(category => {
-          return (
-            <option key={Math.floor(Math.random() * 1000)} value={category}>{category}</option>
-          );
-        })
+        allCategories.map(category => (
+          <option key={Math.floor(Math.random() * 999999)} value={category}>{category}</option>
+        ))
       }
     </select>
   );
 };
 
 CategoryFilter.propTypes = {
-  null: PropTypes.,
-}
+  filter: PropTypes.string.isRequired,
+  handleFilterSelect: PropTypes.func.isRequired,
+};
 
 export default connect(
-  null,
-  null,
+  mapStateToProps,
+  mapDispatchToProps,
 )(CategoryFilter);
