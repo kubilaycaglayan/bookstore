@@ -21,26 +21,14 @@ const BooksList = props => {
   } = props;
 
   return (
-    <>
+    <div className="books-list">
       <CategoryFilter filter={filter} handleFilterSelect={handleFilterSelect} />
-      <table>
-        <thead>
-          <tr>
-            <th>ID</th>
-            <th>TITLE</th>
-            <th>CATEGORY</th>
-            <th>REMOVE</th>
-          </tr>
-        </thead>
-        <tbody>
-          {
-            books
-              .filter(book => (book.category === filter || filter === 'All'))
-              .map(book => <Book key={book.id} book={book} handleRemoveBook={handleRemoveBook} />)
-          }
-        </tbody>
-      </table>
-    </>
+      {
+        books
+          .filter(book => (book.category === filter || filter === 'All'))
+          .map(book => <Book key={book.id} book={book} handleRemoveBook={handleRemoveBook} />)
+      }
+    </div>
   );
 };
 

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Roboto+Slab:wght@300;700&display=swap')
 
 $bubble-gum-pink: #ff5ab7
 $black: #1e1e1e
@@ -13,6 +13,13 @@ $white: #fafafa
   font-family: Montserrat
   font-size: 13px
   letter-spacing: 1.9px
+  color: $black-three
+
+=Text-Style-6()
+  font-family: 'Roboto Slab'
+  font-size: 22px
+  font-weight: bold
+  letter-spacing: -0.2px
   color: $black-three
 
 =Text-Style-7()
@@ -61,3 +68,55 @@ body
           border-radius: 50%
       main
         background-color: $pale-grey
+        padding: 40px 100px
+        .Book-Panel
+          margin-bottom: 15px
+          padding: 32px 27px
+          border-radius: 4px
+          border: solid 1px #e8e8e8
+          background-color: #ffffff
+          .book-information
+            .book-category
+              width: 49px
+              height: 18px
+              opacity: 0.5
+              font-family: Montserrat
+              font-size: 14px
+              font-weight: bold
+              font-stretch: normal
+              font-style: normal
+              line-height: 1.1rem
+              letter-spacing: normal
+              color: $black-three
+            .book-title
+              width: 197px
+              height: 29px
+              +Text-Style-6()
+            .book-author
+              height: 19px
+              font-family: 'Roboto Slab'
+              font-size: 14px
+              font-weight: 300
+              font-stretch: normal
+              font-style: normal
+              line-height: normal
+              letter-spacing: normal
+              color: #4386bf
+            .book-buttons
+              @include flex-it($justify-content: flex-left, $align-items: center)
+              margin-top: 21px
+              width: 73px
+              height: 19px
+              font-family: RobotoSlab
+              font-size: 14px
+              font-weight: 300
+              font-stretch: normal
+              font-style: normal
+              line-height: normal
+              letter-spacing: normal
+              color: #4386bf
+              .remove
+                cursor: pointer
+          .completion
+          .divider
+          .chapter
