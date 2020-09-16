@@ -1,3 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap')
+
+$bubble-gum-pink: #ff5ab7
+$black: #1e1e1e
+$pale-grey: #f5f6fa
+$black-three: #121212
+$azure: #0290ff
+$medium-blue: #307bbe
+$dodger-blue: #379cf6
+$white: #fafafa
+
+=Text-Style-5()
+  font-family: Montserrat
+  font-size: 13px
+  letter-spacing: 1.9px
+  color: $black-three
+
+=Text-Style-7()
+  font-family: Montserrat
+  font-size: 30px
+  font-weight: bold
+  color: $azure
+
+@mixin flex-it($justify-content, $align-items)
+  display: flex
+  justify-content: $justify-content
+  align-items: $align-items
+
 body
   #root
+    background-color: $pale-grey
     padding: 149px 100px
+    nav
+      padding: 30px 100px
+      background-color: #ffffff
+      @include flex-it($justify-content: space-between, $align-items: center)
+      .Bookstore-CMS
+        width: 240px
+        height: 37px
+        +Text-Style-7()
+      .BOOKS
+        width: 59px
+        height: 16px
+        +Text-Style-5()
+        padding-left: 45px
+      .CATEGORIES
+        padding-left: 45px
+        width: 105px
+        height: 16px
+        opacity: 0.5
+        +Text-Style-5()
+      .Oval
+        width: 45px
+        height: 45px
+        border: solid 1px #e8e8e8
+        margin-left: auto
+        border-radius: 50%
