@@ -1,16 +1,6 @@
 import React from 'react';
-import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { categories } from '../constants';
-import { changeFilter } from '../actions';
-
-const mapStateToProps = state => ({
-  filter: state.filter,
-});
-
-const mapDispatchToProps = dispatch => ({
-  handleFilterSelect: filter => dispatch(changeFilter(filter)),
-});
 
 const CategoryFilter = ({
   filter,
@@ -35,7 +25,4 @@ CategoryFilter.propTypes = {
   handleFilterSelect: PropTypes.func.isRequired,
 };
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps,
-)(CategoryFilter);
+export default CategoryFilter;
