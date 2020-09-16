@@ -9,7 +9,7 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-  handleRemoveBook: book => dispatch(removeBook(book))
+  handleRemoveBook: book => dispatch(removeBook(book)),
 });
 
 const BooksList = props => {
