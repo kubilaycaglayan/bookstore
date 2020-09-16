@@ -23,7 +23,7 @@ const initialState = {
     {
       id: Math.floor(Math.random() * 100),
       title: 'Book3',
-      category: 'Sci-fi',
+      category: 'Sci-Fi',
     },
   ],
   filter: 'Categories',
