@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { categories } from '../constants';
@@ -10,54 +10,48 @@ const mapDispatchToProps = dispatch => ({
 
 const BooksForm = ({
   createBook,
-}) => {
-  let state;
-
+}) => {  
   const initialState = {
     title: '',
     category: categories[0],
   };
-
-  const setState = newState => {
-    state = {
-      ...state,
-      ...newState,
-    };
-  };
-
-  setState(initialState);
+  
+  const [state, setState] = useState(initialState);
 
   const handleInputChange = event => {
     setState({
+      ...state,
       title: event.target.value,
     });
   };
 
   const handleSelectChange = event => {
     setState({
+      ...state,
       category: event.target.value,
     });
   };
 
   const handleSubmit = () => {
-    if (document.getElementById('title').value === '') return;
+    if (state.title === '') return;
     createBook({
       ...state,
       id: Math.floor(Math.random() * 100),
     });
-    setState({});
-    document.getElementById('title').value = initialState.title;
-    document.getElementById('category').value = initialState.category;
+    setState({
+      title: '',
+      category: categories[0],
+    });
   };
 
   return (
     <form>
-      <input id="title" onChange={handleInputChange} />
+      <input id="title" onChange={handleInputChange} value={state.title} />
       <select id="category" onChange={handleSelectChange}>
         {
             categories.map((category, index) => (
               // eslint-disable-next-line react/no-array-index-key
-              <option key={index} value={category}>{category}</option>
+              <option className={state.category} key={index} value={category}>{category}</option>
             ))
           }
       </select>
