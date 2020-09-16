@@ -6,7 +6,7 @@ const CategoryFilter = ({
   filter,
   handleFilterSelect,
 }) => {
-  let allCategories = [filter, 'All', ...categories];
+  let allCategories = [filter, 'Categories', ...categories];
   allCategories = [...new Set(allCategories)];
 
   return (

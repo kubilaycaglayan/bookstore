@@ -1,6 +1,21 @@
 import React from 'react';
+import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
+import CategoryFilter from './CategoryFilter';
+import { changeFilter } from '../actions';
 
-const NavBar = () => (
+const mapStateToProps = state => ({
+  filter: state.filter,
+});
+
+const mapDispatchToProps = dispatch => ({
+  handleFilterSelect: filter => dispatch(changeFilter(filter)),
+});
+
+const NavBar = ({
+  handleFilterSelect,
+  filter,
+}) => (
   <>
     <div className="Bookstore-CMS">
       Bookstore CMS
@@ -9,10 +24,18 @@ const NavBar = () => (
       BOOKS
     </div>
     <div className="CATEGORIES">
-      CATEGORIES
+      <CategoryFilter filter={filter} handleFilterSelect={handleFilterSelect} />
     </div>
     <div className="Oval" />
   </>
 );
 
-export default NavBar;
+NavBar.propTypes = {
+  handleFilterSelect: PropTypes.func.isRequired,
+  filter: PropTypes.string.isRequired,
+};
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps,
+)(NavBar);
