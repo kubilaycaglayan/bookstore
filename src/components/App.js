@@ -4,10 +4,14 @@ import BooksForm from '../containers/BooksForm';
 import NavBar from './NavBar';
 
 const App = () => (
-  <div>
-    <NavBar />
-    <BooksList />
-    <BooksForm />
+  <div className="panel-bg">
+    <nav>
+      <NavBar />
+    </nav>
+    <main>
+      <BooksList />
+      <BooksForm />
+    </main>
   </div>
 );
 

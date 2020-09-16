@@ -1,7 +1,7 @@
 import React from 'react';
 
 const NavBar = () => (
-  <nav>
+  <>
     <div className="Bookstore-CMS">
       Bookstore CMS
     </div>
@@ -12,7 +12,7 @@ const NavBar = () => (
       CATEGORIES
     </div>
     <div className="Oval" />
-  </nav>
+  </>
 );
 
 export default NavBar;

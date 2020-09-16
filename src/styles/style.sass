@@ -28,30 +28,36 @@ $white: #fafafa
 
 body
   #root
-    background-color: $pale-grey
     padding: 149px 100px
-    nav
-      padding: 30px 100px
-      background-color: #ffffff
-      @include flex-it($justify-content: space-between, $align-items: center)
-      .Bookstore-CMS
-        width: 240px
-        height: 37px
-        +Text-Style-7()
-      .BOOKS
-        width: 59px
-        height: 16px
-        +Text-Style-5()
-        padding-left: 45px
-      .CATEGORIES
-        padding-left: 45px
-        width: 105px
-        height: 16px
-        opacity: 0.5
-        +Text-Style-5()
-      .Oval
-        width: 45px
-        height: 45px
-        border: solid 1px #e8e8e8
-        margin-left: auto
-        border-radius: 50%
+    background-color: $pale-grey
+    .panel-bg
+      border-radius: 4px
+      box-shadow: 0 0 60px 0 rgba(0, 0, 0, 0.05)
+      background-color: $white
+      nav
+        padding: 30px 100px
+        background-color: #ffffff
+        @include flex-it($justify-content: space-between, $align-items: center)
+        .Bookstore-CMS
+          width: 240px
+          height: 37px
+          +Text-Style-7()
+        .BOOKS
+          width: 59px
+          height: 16px
+          +Text-Style-5()
+          padding-left: 45px
+        .CATEGORIES
+          padding-left: 45px
+          width: 105px
+          height: 16px
+          opacity: 0.5
+          +Text-Style-5()
+        .Oval
+          width: 45px
+          height: 45px
+          border: solid 1px #e8e8e8
+          margin-left: auto
+          border-radius: 50%
+      main
+        background-color: $pale-grey
