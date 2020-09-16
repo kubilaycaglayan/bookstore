@@ -40,9 +40,14 @@ $white: #fafafa
   line-height: normal
   letter-spacing: normal
 
+*
+  margin: 0
+  padding: 0
+  box-sizing: border-box
 
 body
   #root
+    margin: 0 auto
     width: 1600px
     padding: 149px 100px
     background-color: $pale-grey
@@ -65,8 +70,8 @@ body
           +Text-Style-5()
           padding-left: 45px
         .CATEGORIES
+          padding-left: 90px
           select
-            padding-left: 45px
             text-transform: uppercase
             height: 16px
             opacity: 0.5
@@ -119,9 +124,8 @@ body
               letter-spacing: normal
               color: #4386bf
             .book-buttons
-              @include flex-it($justify-content: flex-left, $align-items: center)
+              @include flex-it($justify-content: space-between, $align-items: center)
               margin-top: 21px
-              width: 73px
               height: 19px
               font-family: RobotoSlab
               font-size: 14px
