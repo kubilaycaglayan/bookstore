@@ -47,7 +47,7 @@ const BooksForm = ({
   return (
     <form className="book-form">
       <input id="title" onChange={handleInputChange} value={state.title} placeholder="Book title" />
-      <select id="category" onChange={handleSelectChange}>
+      <select value={state.category} id="category" onChange={handleSelectChange}>
         {
             categories.map(category => (
               <option
