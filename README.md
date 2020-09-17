@@ -36,13 +36,19 @@ To get a local copy up and running follow these simple steps.
     git clone https://github.com/kubilaycaglayan/bookstore.git
     ```
 
-2. Install NPM packages
+2. Change directory
+
+    ```sh
+    cd bookstore
+    ```
+
+3. Install NPM packages
 
     ```sh
     npm install
     ```
 
-3. Start local server
+4. Start local server
 
     ```sh
     npm start
@@ -60,6 +66,7 @@ To get a local copy up and running follow these simple steps.
 
 👤 **Tirthajyoti Ghosh**
 
+- Website: [tirthajyoti](https://tirthajyoti-ghosh.github.io/Portfolio/)
 - GitHub - [@tirthajyoti-ghosh](https://github.com/tirthajyoti-ghosh)
 - Twitter - [@terrific_ghosh](https://twitter.com/terrific_ghosh)
 - LinkedIn - [linkedin](https://www.linkedin.com/in/tirthajyoti-ghosh/)
@@ -79,7 +86,3 @@ Give a ⭐️ if you like this project!
 - `create-react-app` - https://github.com/facebook/create-react-app
 - `create react app buildpack` - https://github.com/mars/create-react-app-buildpack
 Icons made by <a href="http://www.freepik.com/" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>
-
-## 📝 License
-
-This project is [MIT](lic.url) licensed.
