@@ -27,7 +27,7 @@ const NavBar = ({
       <CategoryFilter filter={filter} handleFilterSelect={handleFilterSelect} />
     </div>
     <div className="Oval">
-      <i class="fas fa-user"></i>
+      <i className="fas fa-user" />
     </div>
   </>
 );
