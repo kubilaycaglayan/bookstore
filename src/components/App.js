@@ -10,6 +10,8 @@ const App = () => (
     </nav>
     <main>
       <BooksList />
+      <hr />
+      <h3 className="add-book">ADD NEW BOOK</h3>
       <BooksForm />
     </main>
   </div>
