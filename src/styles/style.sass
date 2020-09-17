@@ -1,0 +1,261 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Roboto+Slab:wght@300;700&display=swap')
+
+$bubble-gum-pink: #ff5ab7
+$black: #1e1e1e
+$pale-grey: #f5f6fa
+$black-three: #121212
+$azure: #0290ff
+$medium-blue: #307bbe
+$dodger-blue: #379cf6
+$white: #fafafa
+
+=Text-Style-5()
+  font-family: Montserrat
+  font-size: 13px
+  letter-spacing: 1.9px
+  color: $black-three
+
+=Text-Style-6()
+  font-family: 'Roboto Slab'
+  font-size: 22px
+  font-weight: bold
+  letter-spacing: -0.2px
+  color: $black-three
+
+=Text-Style-7()
+  font-family: Montserrat
+  font-size: 30px
+  font-weight: bold
+  color: $azure
+
+@mixin flex-it($justify-content, $align-items)
+  display: flex
+  justify-content: $justify-content
+  align-items: $align-items
+
+@mixin normalize()
+  font-weight: normal
+  font-stretch: normal
+  font-style: normal
+  line-height: normal
+  letter-spacing: normal
+
+*
+  margin: 0
+  padding: 0
+  box-sizing: border-box
+
+body
+  background-color: $pale-grey
+  #root
+    margin: 0 auto
+    max-width: 1600px
+    padding: 149px 100px
+    .panel-bg
+      max-width: 1400px
+      border-radius: 4px
+      box-shadow: 0 0 70px 0 rgba(0, 0, 0, 0.377)
+      background-color: $white
+      nav
+        padding: 30px 100px
+        background-color: #ffffff
+        border-bottom: solid 1px #e8e8e8
+        @include flex-it($justify-content: space-between, $align-items: center)
+        .Bookstore-CMS
+          width: 240px
+          height: 37px
+          +Text-Style-7()
+        .BOOKS
+          width: 59px
+          height: 16px
+          +Text-Style-5()
+          padding-left: 45px
+        .CATEGORIES
+          padding-left: 90px
+          select
+            text-transform: uppercase
+            height: 16px
+            opacity: 0.5
+            +Text-Style-5()
+            background-color: inherit
+            border: none
+            outline: none
+        .Oval
+          width: 45px
+          height: 45px
+          border: solid 1px #e8e8e8
+          margin-left: auto
+          border-radius: 50%
+          @include flex-it($justify-content: center, $align-items: center)
+          .fa-user
+            color: $azure
+            font-size: 20px
+      main
+        background-color: $white
+        padding: 40px 100px
+        padding-bottom: 240px
+        .Book-Panel
+          @include flex-it($justify-content: space-between, $align-items: center)
+          max-width: 1200px
+          margin-bottom: 15px
+          padding: 32px 27px
+          border-radius: 4px
+          border: solid 1px #e8e8e8
+          background-color: #ffffff
+          .book-information
+            .book-category
+              width: 49px
+              height: 18px
+              opacity: 0.5
+              font-family: Montserrat
+              font-size: 14px
+              font-weight: bold
+              font-stretch: normal
+              font-style: normal
+              line-height: 1.1rem
+              letter-spacing: normal
+              color: $black-three
+            .book-title
+              width: 197px
+              height: 29px
+              +Text-Style-6()
+            .book-author
+              height: 19px
+              font-family: 'Roboto Slab'
+              font-size: 14px
+              font-weight: 300
+              font-stretch: normal
+              font-style: normal
+              line-height: normal
+              letter-spacing: normal
+              color: #4386bf
+            .book-buttons
+              @include flex-it($justify-content: space-between, $align-items: center)
+              margin-top: 21px
+              height: 19px
+              font-family: 'Roboto Slab'
+              font-size: 14px
+              font-weight: 300
+              font-stretch: normal
+              font-style: normal
+              line-height: normal
+              letter-spacing: normal
+              color: #4386bf
+              .remove
+                cursor: pointer
+          .completion
+            border-right: $pale-grey 3px solid
+            padding-right: 80px
+            margin-left: auto
+            margin-right: 60px
+            @media screen and (max-width: 1440px)
+              margin-right: 40px
+              padding-right: 40px
+            @include flex-it($justify-content: space-around, $align-items: center)
+            .Oval-2
+              width: 68px
+              height: 68px
+              border: 5px $medium-blue solid
+              border-radius: 50%
+              margin-right: 21px
+            .Percent-Complete
+              width: 68px
+              height: 39px
+              font-family: Montserrat
+              font-size: 32px
+              @include normalize()
+              color: $black-three
+            .Completed
+              width: 80px
+              height: 18px
+              opacity: 0.5
+              font-family: Montserrat
+              font-size: 14px
+              @include normalize()
+              color: $black-three
+          .chapter
+            margin-right: 5vw
+            @media screen and (max-width: 1200px)
+              margin-right: 0
+            .Current-Chapter
+              width: 126px
+              height: 18px
+              opacity: 0.5
+              font-family: 'Roboto Slab'
+              font-size: 13px
+              font-weight: 300
+              color: $black-three
+              margin-bottom: 7px
+            .Current-Lesson
+              margin-bottom: 30px
+              width: 75px
+              height: 21px
+              font-family: 'Roboto Slab'
+              font-size: 16px
+              font-weight: 300
+              letter-spacing: -0.4px
+              color: $black-three
+            .Rectangle-2
+              @include flex-it($justify-content: center, $align-items: center)
+              flex-direction: column
+              width: 184px
+              height: 33px
+              border-radius: 3px
+              background-color: $azure
+              font-family: 'Roboto Slab'
+              font-size: 13px
+              font-weight: 300
+              letter-spacing: 0.5px
+              text-align: center
+              color: #ffffff
+        hr
+          opacity: 0.2
+          border-radius: 4px
+          background-color: $pale-grey
+          margin: 40px 0
+        .add-book
+          font-family: Montserrat
+          font-size: 20px
+          font-weight: bold
+          letter-spacing: -0.18px
+          color: #888888
+        .book-form
+          margin: 20px 0
+          @include flex-it($justify-content: space-between, $align-items: center)
+          input, select
+            width: 54%
+            height: 45px
+            border-radius: 4px
+            border: solid 1px #e8e8e8
+            background-color: #ffffff
+            padding: 13px
+            outline: none
+            font-size: 16px
+            &::placeholder
+              font-family: Montserrat
+              font-size: 16px
+              letter-spacing: -0.15px
+              color: #c4c4c4
+          select
+            padding: 10px
+            width: 25%
+            font-family: Montserrat
+            font-size: 16px
+            font-weight: normal
+            font-stretch: normal
+            font-style: normal
+            line-height: normal
+            letter-spacing: -0.15px
+            color: #c4c4c4
+          button
+            width: 15%
+            height: 45px
+            border-radius: 3px
+            border-color: transparent
+            background-color: $azure
+            font-family: 'Roboto Slab'
+            font-size: 13px
+            font-weight: bold
+            letter-spacing: 0.5px
+            text-align: center
+            color: #ffffff
