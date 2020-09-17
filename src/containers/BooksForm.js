@@ -36,23 +36,26 @@ const BooksForm = ({
     if (state.title === '') return;
     createBook({
       ...state,
-      id: Math.floor(Math.random() * 999999),
+      id: Math.floor(Math.random() * 100),
     });
-    setState(initialState);
+    setState({
+      title: '',
+      category: categories[0],
+    });
   };
 
   return (
-    <form>
-      <input id="title" onChange={handleInputChange} value={state.title} />
+    <form className="book-form">
+      <input id="title" onChange={handleInputChange} value={state.title} placeholder="Book title" />
       <select id="category" onChange={handleSelectChange}>
         {
             categories.map((category, index) => (
               // eslint-disable-next-line react/no-array-index-key
-              <option key={index} value={category}>{category}</option>
+              <option className={state.category} key={index} value={category}>{category}</option>
             ))
           }
       </select>
-      <button onClick={handleSubmit} type="button">Add Book</button>
+      <button onClick={handleSubmit} type="button">ADD BOOK</button>
     </form>
   );
 };

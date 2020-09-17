@@ -46,11 +46,11 @@ $white: #fafafa
   box-sizing: border-box
 
 body
+  background-color: $pale-grey
   #root
     margin: 0 auto
     width: 1600px
     padding: 149px 100px
-    background-color: $pale-grey
     .panel-bg
       width: 1400px
       border-radius: 4px
@@ -86,7 +86,7 @@ body
           margin-left: auto
           border-radius: 50%
       main
-        background-color: $pale-grey
+        background-color: $white
         padding: 40px 100px
         .Book-Panel
           @include flex-it($justify-content: space-between, $align-items: center)
@@ -197,3 +197,53 @@ body
               letter-spacing: 0.5px
               text-align: center
               color: #ffffff
+        hr
+          opacity: 0.2
+          border-radius: 4px
+          background-color: $pale-grey
+          margin: 40px 0
+        .add-book
+          font-family: Montserrat
+          font-size: 20px
+          font-weight: bold
+          letter-spacing: -0.18px
+          color: #888888
+        .book-form
+          margin: 20px 0
+          @include flex-it($justify-content: space-between, $align-items: center)
+          input, select
+            width: 664px
+            height: 45px
+            border-radius: 4px
+            border: solid 1px #e8e8e8
+            background-color: #ffffff
+            padding: 13px
+            outline: none
+            font-size: 16px
+            &::placeholder
+              font-family: Montserrat
+              font-size: 16px
+              letter-spacing: -0.15px
+              color: #c4c4c4
+          select
+            width: 285px
+            font-family: Montserrat
+            font-size: 16px
+            font-weight: normal
+            font-stretch: normal
+            font-style: normal
+            line-height: normal
+            letter-spacing: -0.15px
+            color: #c4c4c4
+          button
+            width: 184px
+            height: 45px
+            border-radius: 3px
+            border-color: transparent
+            background-color: $azure
+            font-family: 'Roboto Slab'
+            font-size: 13px
+            font-weight: bold
+            letter-spacing: 0.5px
+            text-align: center
+            color: #ffffff
