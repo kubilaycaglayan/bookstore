@@ -85,4 +85,5 @@ Give a ⭐️ if you like this project!
 
 - `create-react-app` - https://github.com/facebook/create-react-app
 - `create react app buildpack` - https://github.com/mars/create-react-app-buildpack
-Icons made by <a href="http://www.freepik.com/" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>
+- Favicon made by <a href="http://www.freepik.com/" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>
+- Fontawesome
