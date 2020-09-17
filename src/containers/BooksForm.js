@@ -49,9 +49,14 @@ const BooksForm = ({
       <input id="title" onChange={handleInputChange} value={state.title} placeholder="Book title" />
       <select id="category" onChange={handleSelectChange}>
         {
-            categories.map((category, index) => (
-              // eslint-disable-next-line react/no-array-index-key
-              <option className={state.category} key={index} value={category}>{category}</option>
+            categories.map(category => (
+              <option
+                className={state.category}
+                key={Math.floor(Math.random() * 999999)}
+                value={category}
+              >
+                {category}
+              </option>
             ))
           }
       </select>
