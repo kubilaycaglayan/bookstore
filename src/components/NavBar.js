@@ -26,7 +26,9 @@ const NavBar = ({
     <div className="CATEGORIES">
       <CategoryFilter filter={filter} handleFilterSelect={handleFilterSelect} />
     </div>
-    <div className="Oval" />
+    <div className="Oval">
+      <i class="fas fa-user"></i>
+    </div>
   </>
 );
 
