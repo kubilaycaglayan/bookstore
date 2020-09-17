@@ -49,10 +49,10 @@ body
   background-color: $pale-grey
   #root
     margin: 0 auto
-    width: 1600px
+    max-width: 1600px
     padding: 149px 100px
     .panel-bg
-      width: 1400px
+      max-width: 1400px
       border-radius: 4px
       box-shadow: 0 0 70px 0 rgba(0, 0, 0, 0.377)
       background-color: $white
@@ -96,7 +96,7 @@ body
         padding-bottom: 240px
         .Book-Panel
           @include flex-it($justify-content: space-between, $align-items: center)
-          width: 1200px
+          max-width: 1200px
           margin-bottom: 15px
           padding: 32px 27px
           border-radius: 4px
@@ -148,6 +148,9 @@ body
             padding-right: 80px
             margin-left: auto
             margin-right: 60px
+            @media screen and (max-width: 1440px)
+              margin-right: 40px
+              padding-right: 40px
             @include flex-it($justify-content: space-around, $align-items: center)
             .Oval-2
               width: 68px
@@ -171,7 +174,9 @@ body
               @include normalize()
               color: $black-three
           .chapter
-            margin-right: 120px
+            margin-right: 5vw
+            @media screen and (max-width: 1200px)
+              margin-right: 0
             .Current-Chapter
               width: 126px
               height: 18px
@@ -218,7 +223,7 @@ body
           margin: 20px 0
           @include flex-it($justify-content: space-between, $align-items: center)
           input, select
-            width: 664px
+            width: 54%
             height: 45px
             border-radius: 4px
             border: solid 1px #e8e8e8
@@ -232,7 +237,7 @@ body
               letter-spacing: -0.15px
               color: #c4c4c4
           select
-            width: 285px
+            width: 25%
             font-family: Montserrat
             font-size: 16px
             font-weight: normal
@@ -242,7 +247,7 @@ body
             letter-spacing: -0.15px
             color: #c4c4c4
           button
-            width: 184px
+            width: 15%
             height: 45px
             border-radius: 3px
             border-color: transparent
