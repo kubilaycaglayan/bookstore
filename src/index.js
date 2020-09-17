@@ -1,3 +1,4 @@
+import './styles/style.sass';
 import React from 'react';
 import ReactDOM from 'react-dom';
 
@@ -11,21 +12,21 @@ const initialState = {
   books: [
     {
       id: Math.floor(Math.random() * 100),
-      title: 'Book1',
+      title: 'Great Expectations',
       category: 'Action',
     },
     {
       id: Math.floor(Math.random() * 100),
-      title: 'Book2',
+      title: 'Origins',
       category: 'Thriller',
     },
     {
       id: Math.floor(Math.random() * 100),
-      title: 'Book3',
-      category: 'Sci-fi',
+      title: 'Artemis Fowl',
+      category: 'Sci-Fi',
     },
   ],
-  filter: 'All',
+  filter: 'Categories',
 };
 
 const store = createStore(reducer, initialState);
